@@ -57,9 +57,9 @@ def load_models():
         gender_model = joblib.load("gender_model.pkl")
         gender_scaler = joblib.load("scaler_gender.pkl")
         return risk_model, risk_scaler, gender_model, gender_scaler
-    except:
+    except Exception as e:
+        st.error(f"❌ Model gagal dimuat: {e}")
         return None, None, None, None
-
 risk_model, risk_scaler, gender_model, gender_scaler = load_models()
 
 REKOMENDASI_DETAIL = {
@@ -110,12 +110,14 @@ def get_rekomendasi(label):
 
 def prediksi_risiko(fhr, nadi, sistol, diastol, hb, gula, lila, bb, tb, usia):
     if risk_model is None:
-        return "Normal", 0.5, []
+        return "Normal", 0.5, get_rekomendasi("Normal")
+    
     X = np.array([[fhr, nadi, sistol, diastol, hb, gula, lila, bb, tb, usia]])
     X = risk_scaler.transform(X)
     pred = risk_model.predict(X)[0]
     proba = risk_model.predict_proba(X)[0]
     labels = ["Normal", "Rendah", "Sedang", "Tinggi"]
+    
     return labels[pred], np.max(proba), get_rekomendasi(labels[pred])
 
 def prediksi_gender(bpd, hc, ac, fl, fhr, usia):
