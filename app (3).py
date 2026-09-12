@@ -272,7 +272,8 @@ if st.button("🚀 Jalankan Analisis Hasil MomCare AI", use_container_width=True
 
             # REKOMENDASI KLINIS BERBASIS BUKTI ILMIAH
             st.subheader("💡 Rekomendasi Klinis Berbasis Evidensi Medis")
-            st.markdown(f"**{rekom['judul']}**")
+            judul = rekom.get("judul", "Rekomendasi")
+            st.markdown(f"**{judul}**")
             st.caption(f"📚 Sumber Acuan: {rekom['sumber']}")
 
             for i, item in enumerate(rekom['rekomendasi'], 1):
