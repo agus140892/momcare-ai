@@ -6,3 +6,4 @@ joblib
 fpdf2
 Pillow
 opencv-python-headless
+xgboost
