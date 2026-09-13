@@ -161,7 +161,7 @@ st.sidebar.markdown("### 📅 Kalkulator HPHT & Usia Kehamilan")
 st.sidebar.caption("Standar Medis RCOG & Rumus Naegele")
 
 hpht_date = st.sidebar.date_input("Tanggal HPHT (Hari Pertama Haid Terakhir)", value=datetime(2025, 12, 1))
-tgl_periksa_date = st.sidebar.date_input("Tanggal Pemeriksaan USG", value=datetime.today())
+tgl_periksa_date = st.sidebar.date_input("Tanggal Pemeriksaan", value=datetime.today())
 
 # Perhitungan Usia Kehamilan & HPL (Hari Perkiraan Lahir / HTPT)
 selisih_hari = (tgl_periksa_date - hpht_date).days
