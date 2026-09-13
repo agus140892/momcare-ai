@@ -65,43 +65,67 @@ risk_model, risk_scaler, gender_model, gender_scaler = load_models()
 REKOMENDASI_DETAIL = {
     "Normal": {
         "judul": "✅ Kehamilan Normal - Perawatan Rutin Antenatal",
-        "sumber": "WHO (2023) & RCOG Guideline No. 57",
+        "sumber": (
+            "World Health Organization. (2023). WHO recommendations on antenatal care for a positive pregnancy experience: Summary. World Health Organization. & "
+            "Royal College of Obstetricians and Gynaecologists. (2020). Guideline No. 57. RCOG."
+        ),
         "rekomendasi": [
             "Lanjutkan kunjungan antenatal care (ANC) minimal 8 kali sesuai standar WHO.",
             "Pantau gerakan janin secara mandiri setiap hari.",
             "Suplementasi rutin: Asam folat 400 mcg/hari & Zat Besi (Fe) 60 mg/hari."
         ],
-        "referensi": ["WHO Recommendations (2023) - Level 1A", "RCOG Guideline (2020)"]
+        "referensi": [
+            "World Health Organization. (2023). WHO recommendations on antenatal care for a positive pregnancy experience: Summary. World Health Organization.",
+            "Royal College of Obstetricians and Gynaecologists. (2020). Guideline No. 57. RCOG."
+        ]
     },
     "Rendah": {
         "judul": "⚠️ Risiko Rendah - Pemantauan Berkala Diperlukan",
-        "sumber": "RCOG (2020) & SMFM Clinical Guidance",
+        "sumber": (
+            "Royal College of Obstetricians and Gynaecologists. (2020). Green-top Guideline No. 1A. RCOG. & "
+            "Society for Maternal-Fetal Medicine. (2023). SMFM clinical guidance: Fetal surveillance. SMFM."
+        ),
         "rekomendasi": [
             "Tingkatkan frekuensi konsultasi obstetri menjadi setiap 2 minggu sekali.",
             "Lakukan pemantauan ketat terhadap tekanan darah mandiri di rumah.",
             "Modifikasi diit nutrisi: tingkatkan asupan protein hewani dan kontrol indeks glikemik."
         ],
-        "referensi": ["RCOG Green-top No. 1A", "SMFM Fetal Surveillance (2023) - Level 1B"]
+        "referensi": [
+            "Royal College of Obstetricians and Gynaecologists. (2020). Green-top Guideline No. 1A. RCOG.",
+            "Society for Maternal-Fetal Medicine. (2023). SMFM clinical guidance: Fetal surveillance. SMFM."
+        ]
     },
     "Sedang": {
         "judul": "⚠️⚠️ Risiko Sedang - Evaluasi Komprehensif Spesialis",
-        "sumber": "RCOG, SMFM, ISUOG Doppler Guidelines (2023)",
+        "sumber": (
+            "International Society of Ultrasound in Obstetrics and Gynecology. (2023). ISUOG practice guidelines: Use of Doppler ultrasonography in obstetrics. ISUOG. & "
+            "Royal College of Obstetricians and Gynaecologists. (2020). RCOG guidelines. RCOG."
+        ),
         "rekomendasi": [
             "SEGERA lakukan penjadwalan pemeriksaan lanjutan dengan Dokter Spesialis Obgin (Sp.OG).",
             "Lakukan evaluasi biometri lanjutan melalui USG Doppler Arteri Umbilikalis dan KTG.",
             "Restriksi aktivitas fisik berat dan kontrol ketat gula darah / tekanan darah."
         ],
-        "referensi": ["ISUOG Guidelines (2023) - Level 1A", "RCOG (2020)"]
+        "referensi": [
+            "International Society of Ultrasound in Obstetrics and Gynecology. (2023). ISUOG practice guidelines: Use of Doppler ultrasonography in obstetrics. ISUOG.",
+            "Royal College of Obstetricians and Gynaecologists. (2020). RCOG guidelines. RCOG."
+        ]
     },
     "Tinggi": {
         "judul": "🚨 RISIKO TINGGI - RUJUKAN GAWAT DARURAT MEDIS!",
-        "sumber": "RCOG (2022) & WHO Emergency Guidelines (2023)",
+        "sumber": (
+            "Royal College of Obstetricians and Gynaecologists. (2022). RCOG emergency guidelines. RCOG. & "
+            "World Health Organization. (2023). WHO emergency guidelines for maternal and newborn care. World Health Organization."
+        ),
         "rekomendasi": [
             "🚨 SEGERA rujuk pasien ke Unit Gawat Darurat (IGD) Rumah Sakit terdekat.",
             "🚨 Lakukan stabilisasi hemodinamik ibu dan resusitasi intrauterine janin segera.",
             "🚨 Jangan menunda intervensi medis atau terminasi kehamilan atas indikasi klinis."
         ],
-        "referensi": ["RCOG Emergency Guidelines (2022) - Level 1A", "WHO (2023) - Level 1A"]
+        "referensi": [
+            "Royal College of Obstetricians and Gynaecologists. (2022). RCOG emergency guidelines. RCOG.",
+            "World Health Organization. (2023). WHO emergency guidelines for maternal and newborn care. World Health Organization."
+        ]
     }
 }
 
